@@ -1,16 +1,16 @@
-
-DISCLAIMER: This application is used for demonstrative and illustrative purposes only and does not constitute an offering that has gone through regulatory review.
+# Work In Progress. Please re-visit soon for the complete Pattern
 
 # Programming Language Classification with IBM Watson Studio, Watson, and GitHub
 
 ## Description
-In this Code Pattern, we will use Jupyter Notebooks in IBM Watson Studio to build a model that predicts a code's programming language based on its text. The model will then be evaluated against IBM's Watson Natural Languauge classifier.
+In this Code Pattern, we will use Jupyter Notebooks in IBM Watson Studio to build a model that predicts a code's programming language based on its text. The model will then be evaluated using IBM's Watson Natural Languauge classifier.
 
 When the reader has completed this Code Pattern, they will understand how to:
 
-Build a labeled data set
-Build a predictive model within a Jupyter Notebook
-Configure and use Watson APIs
+* Build a labeled data set.
+* Use Watson Natural Language Classifier to create a predictive model.
+* Build a predictive model within a Jupyter Notebook.
+* Configure and use Watson APIs.
 
 ![](images/architecture.png)
 
@@ -31,40 +31,27 @@ Configure and use Watson APIs
 * [Watson Natural Language Classifier](https://www.ibm.com/watson/services/natural-language-classifier/): Understand the intent behind text passages though custom classifiers, complete with a confidence score.
 
 ## Featured technologies
-* [Watson APIs](https://www.ibm.com/watson/developer/): Watson on the IBM Cloud allows you to integrate the world's most powerful AI into your application and store, train and manage your data in the most secure cloud.
-* [Machine Learning](https://medium.com/ibm-data-science-experience): Machine Learning can be applied to disparate solution spaces to deliver disruptive technologies.
+* [Artificial Intelligence](https://medium.com/ibm-data-science-experience): Artificial intelligence can be applied to disparate solution spaces to deliver disruptive technologies.
+* [Python](https://www.python.org/): Python is a programming language that lets you work more quickly and integrate your systems more effectively.
 
 # Watch the Video
 TBD
 
 # Steps
-1. [Create an instance of the IBM Watson Studio Service](#1-create-an-instance-of-the-watson-studio-service)
-2. [Create a project in Watson Studio](#2-create-a-project-in-watson-studio-and-bind-it-to-your-watson-machine-learning-service-instance)
-3. [Create a notebook in Watson Studio](#3-create-a-notebook-in-watson-studio)
-4. [Run the notebooks in Watson Studio](#4-run-the-notebook-in-watson-studio)
+1. [Sign up for the Watson Studio](#1-sign-up-for-watson-studio)
+1. [Create a project in Watson Studio](#2-create-a-project-in-watson-studio-and-bind-it-to-your-watson-machine-learning-service-instance)
+1. [Create a notebook in Watson Studio](#3-create-a-notebook-in-watson-studio)
+1. [Run the notebooks in Watson Studio](#4-run-the-notebook-in-watson-studio)
 
+## 1. Sign up for Watson Studio
 
-### 1. Create an instance of the IBM Watson Studio Service
+Sign up for IBM's [Watson Studio](https://dataplatform.ibm.com). By creating a project in Watson Studio a free tier ``Object Storage`` service will be created in your IBM Cloud account. Take note of your service names as you will need to select them in the following steps.
 
-* In your browser go to the IBM Cloud Dashboard and click `Catalog`.
+> Note: When creating your Object Storage service, select the ``Free`` storage type in order to avoid having to pay an upgrade fee.
 
-* Search for and select `Watson Studio`.
+### 2. Create a project in Watson Studio
 
-  ![](images/dsx-service.jpg?raw=true)
-
-* Verify the service being created is under the Lite plan.
-
-  ![](images/dsx-create.jpg?raw=true)
-
-* Click `Create`
-
-### 3. Create a project in Watson Studio
-
-* In a new browser tab go to [https://datascience.ibm.com](https://datascience.ibm.com).
-
-* Click on `Sign In` at the top of the page.
-
-* From the dashboard, click on `New Project` from the dashboard, select a `Complete` project.
+* From the [Watson Studio](https://datascience.ibm.com) dashboard, click on `New Project` from the dashboard, select a `Complete` project.
 
   ![](images/new-project.png?raw=true)
 
@@ -74,28 +61,24 @@ TBD
 
 > Note: Services created must be in the same region, and space, as your Watson Studio service.
 
-### 4. Create a notebook in Watson Studio
+### 3. Create a notebook in Watson Studio
 
-* If you don't have your newly created Project open, first click `Projects` -> `View All Projects`, and then select your newly created project from Step 4. Next, in the Watson Studio browser tab click on `Overview` and then click `add notebooks`.
-
-  ![](images/add-notebook.png?raw=true)
-
-* Click on `From URL` and name the notebook _Apache Spark integration with Watson ML_.
-
-* Under `Notebook URL` provide the following url: https://github.com/IBM/predictive-model-on-watson-ml/blob/master/demo1.ipynb
-
-  ![](doc/source/images/create-notebook.png?raw=true)
-
+* In [Watson Studio](https://dataplatform.ibm.com), click on `Create notebook` to create a notebook.
+* In your project, either click `+ Add to project` -> `Notebook` or in the `Assets` tab, select the `Create notebook` option.
+* Select the `From URL` tab.
+* Enter a name for the notebook.
+* Optionally, enter a description for the notebook.
+* Under `Notebook URL` provide the following url: `https://github.com/IBM/programming-language-classifier/tree/master/notebooks/buildmodels.ipynb`
 * Click `Create Notebook` to create the new notebook.
 
-### 5. Run the notebook in Watson Studio
+### 4. Run the notebook in Watson Studio
 
 * Place your cursor in the first code block in the notebook.
 * Click on the `Run` icon to run the code in the cell.
+* Move your cursor to each code cell and run the code in it. Read the comments for each cell to understand what the code is doing.
 
-* Move your cursor to each code cell and run the code in it. Read the comments for each cell to understand what the code is doing. **Important** when the code in a cell is still running, the label to the left changes to **In [\*]**:.
-  Do **not** continue to the next cell until the code is finished running.
+ **Important** when the code in a cell is still running, the label to the left changes to **In [\*]**:.
+  Do **not** continue to the next cell until the code is finished running, and the [\*] has changed to a number.
 
 * When you get to the cell that says `Stop here !!!!` insert the username and password that you saved from your Watson Machine Learning instance into the code before running it.
-
 * Continue running each cell until you finish the entire notebook.
