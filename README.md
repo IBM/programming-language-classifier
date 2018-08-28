@@ -3,7 +3,7 @@
 # Programming Language Classification with IBM Watson Studio, Watson, and GitHub
 
 ## Description
-In this Code Pattern, we will use Jupyter Notebooks in IBM Watson Studio to build a model that predicts a code's programming language based on its text. The model will then be evaluated using IBM's Watson Natural Languauge classifier.
+In this Code Pattern, we will use Jupyter Notebooks in IBM Watson Studio to build a model that predicts a code's programming language based on its text. The model will then be evaluated using IBM's Watson Natural Language classifier.
 
 When the reader has completed this Code Pattern, they will understand how to:
 
