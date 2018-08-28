@@ -68,7 +68,7 @@ Sign up for IBM's [Watson Studio](https://dataplatform.ibm.com). By creating a p
 * Select the `From URL` tab.
 * Enter a name for the notebook.
 * Optionally, enter a description for the notebook.
-* Under `Notebook URL` provide the following url: `https://github.com/IBM/programming-language-classifier/tree/master/notebooks/buildmodels.ipynb`
+* Under `Notebook URL` provide the following url: `https://raw.githubusercontent.com/IBM/programming-language-classifier/master/notebooks/buildmodels.ipynb`
 * Click `Create Notebook` to create the new notebook.
 
 ### 4. Run the notebook in Watson Studio
