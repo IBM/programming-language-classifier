@@ -12,38 +12,40 @@ When the reader has completed this Code Pattern, they will understand how to:
 * Build a predictive model within a Jupyter Notebook.
 * Configure and use Watson APIs.
 
-![](images/architecture.png)
+![](doc/source/images/architecture.png)
 
 ## Flow
-1. The developer creates an IBM Watson Studio Workspace.
-2. Watson Studio depends on an Apache Spark service.
-3. IBM Data Science Experience uses Cloud Object storage to manage your data.
-4. This lab is built around a Jupyter Notebook, this is where the developer will gather data, train, and evaluate their model.
-5. Create GitHub dataset.
-6. Build Naive Bayes Classifier
-7. Configure Watson Natural Language Understanding
-8. Evaluate Models
+
+1. The developer creates an IBM [Watson Studio Workspace](https://dataplatform.ibm.com).
+1. Using Watson Studio, the developer creates a Jupyter notebook and [Watson Natural Language Classifier](https://www.ibm.com/watson/services/natural-language-classifier/) instance.
+1. User can create a new dataset from Github, or use exsiting one in this repo.
+1. User interacts with notebook to Build Naive Bayes Classifier and Natural Language Classifier instance using the [Watson Developer Cloud SDK](https://github.com/watson-developer-cloud)
+1. The notebook Python code can use NLC apis to create and use a classifier.
 
 
 ## Included components
+
 * [Watson Studio](https://www.ibm.com/bs-en/marketplace/data-science-experience): Analyze data using RStudio, Jupyter, and Python in a configured, collaborative environment that includes IBM value-adds, such as managed Spark.
 * [Jupyter Notebook](http://jupyter.org/): An open source web application that allows you to create and share documents that contain live code, equations, visualizations, and explanatory text.
 * [Watson Natural Language Classifier](https://www.ibm.com/watson/services/natural-language-classifier/): Understand the intent behind text passages though custom classifiers, complete with a confidence score.
 
 ## Featured technologies
+
 * [Artificial Intelligence](https://medium.com/ibm-data-science-experience): Artificial intelligence can be applied to disparate solution spaces to deliver disruptive technologies.
 * [Python](https://www.python.org/): Python is a programming language that lets you work more quickly and integrate your systems more effectively.
 
 # Watch the Video
+
 TBD
 
 # Steps
+
 1. [Sign up for the Watson Studio](#1-sign-up-for-watson-studio)
 1. [Create a project in Watson Studio](#2-create-a-project-in-watson-studio-and-bind-it-to-your-watson-machine-learning-service-instance)
 1. [Create a notebook in Watson Studio](#3-create-a-notebook-in-watson-studio)
 1. [Run the notebooks in Watson Studio](#4-run-the-notebook-in-watson-studio)
 
-## 1. Sign up for Watson Studio
+### 1. Sign up for Watson Studio
 
 Sign up for IBM's [Watson Studio](https://dataplatform.ibm.com). By creating a project in Watson Studio a free tier ``Object Storage`` service will be created in your IBM Cloud account. Take note of your service names as you will need to select them in the following steps.
 
