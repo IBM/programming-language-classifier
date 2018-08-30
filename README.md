@@ -83,7 +83,7 @@ Sign up for IBM's [Watson Studio](https://dataplatform.ibm.com). By creating a p
 
 # Sample output
 
-To see the notebook with sample output, load `examples/exampleNotebook.ipynb`.
+To see the notebook with sample output, load [`examples/exampleNotebook.ipynb`](examples/exampleNotebook.ipynb).
 
 ![](doc/source/images/progLangClassExampleOut.png)
 
