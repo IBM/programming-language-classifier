@@ -1,5 +1,3 @@
-# Work In Progress. Please re-visit soon for the complete Pattern
-
 # Programming Language Classification with IBM Watson Studio, Watson, and GitHub
 
 ## Description
@@ -41,6 +39,8 @@ TBD
 # Steps
 
 1. [Sign up for the Watson Studio](#1-sign-up-for-watson-studio)
+1. [Create a project and add services](#2-create-a-project-and-add-services)
+1. [Create a notebook](#3-create-the-notebook)
 1. [Create a project in Watson Studio](#2-create-a-project-in-watson-studio-and-bind-it-to-your-watson-machine-learning-service-instance)
 1. [Create a notebook in Watson Studio](#3-create-a-notebook-in-watson-studio)
 1. [Run the notebooks in Watson Studio](#4-run-the-notebook-in-watson-studio)
@@ -51,27 +51,22 @@ Sign up for IBM's [Watson Studio](https://dataplatform.ibm.com). By creating a p
 
 > Note: When creating your Object Storage service, select the ``Free`` storage type in order to avoid having to pay an upgrade fee.
 
-### 2. Create a project in Watson Studio
+## 2. Create a project and add services
 
-* From the [Watson Studio](https://datascience.ibm.com) dashboard, click on `New Project` from the dashboard, select a `Complete` project.
-
-  ![](images/new-project.png?raw=true)
-
-* Projects depend on two services: Object Storage, and a Compute Engine.  If you don't already have Object Storage or a Compute Engine, you can create a new instance of each service while defining a new project.  The _New Project_ panel is easy to use, either select an existing service on the right, or create a new one.  In the example below services need to be created.
-
-  ![](images/create-services.png?raw=true)
-
-> Note: Services created must be in the same region, and space, as your Watson Studio service.
+* In Watson Studio create a new project which will contain the notebook and connections to the IBM Cloud services. Choose the `Data Science` project tile.
+* Associate the project with a Natural Language Classifier service instance. Go to `Settings` tab in the new Project and scroll down to `Associated Services`. Click + and select `Watson` from the drop-down menu. Select an existing `Watson Natural Language Classifier` service or create a new one for free.
+* Once your `Natural Language Classifier` (NLC) service is created, copy the credentials and save them for later, when you will use them in your Jupyter notebook.
 
 ### 3. Create a notebook in Watson Studio
 
-* In [Watson Studio](https://dataplatform.ibm.com), click on `Create notebook` to create a notebook.
-* In your project, either click `+ Add to project` -> `Notebook` or in the `Assets` tab, select the `Create notebook` option.
+* In the `Assets` tab of the new project, select `Notebooks` -> `+ New notebook` OR select `+ Add to project` -> `Notebook`.
 * Select the `From URL` tab.
 * Enter a name for the notebook.
 * Optionally, enter a description for the notebook.
 * Under `Notebook URL` provide the following url: `https://raw.githubusercontent.com/IBM/programming-language-classifier/master/notebooks/buildmodels.ipynb`
-* Click `Create Notebook` to create the new notebook.
+* Click the `Create` button.
+
+![](https://github.com/IBM/pattern-utils/blob/master/watson-studio/notebook_with_url_py35.png)
 
 ### 4. Run the notebook in Watson Studio
 
@@ -82,5 +77,24 @@ Sign up for IBM's [Watson Studio](https://dataplatform.ibm.com). By creating a p
  **Important** when the code in a cell is still running, the label to the left changes to **In [\*]**:.
   Do **not** continue to the next cell until the code is finished running, and the [\*] has changed to a number.
 
-* When you get to the cell that says `Stop here !!!!` insert the username and password that you saved from your Watson Machine Learning instance into the code before running it.
+* When you get to the cell that says `## 3.0 Create Classifier with Watson NLC and Evaluate Classification Accuracy`, insert the username and password that you saved from your Watson Natural Language Classifier instance into the code before running it.
+* When you get to the cell that says `3.2 Add Classifier ID`, Add the `classifier_id` that is in the output after running `3.1 Create Classifier`.
 * Continue running each cell until you finish the entire notebook.
+
+# Sample output
+
+To see the notebook with sample output, load `examples/exampleNotebook.ipynb`.
+
+![](doc/source/images/progLangClassExampleOut.png)
+
+# Learn more
+
+* **Artificial Intelligence Code Patterns**: Enjoyed this Code Pattern? Check out our other [AI Code Patterns](https://developer.ibm.com/code/technologies/artificial-intelligence/).
+* **Data Analytics Code Patterns**: Enjoyed this Code Pattern? Check out our other [Data Analytics Code Patterns](https://developer.ibm.com/code/technologies/data-science/)
+* **AI and Data Code Pattern Playlist**: Bookmark our [playlist](https://www.youtube.com/playlist?list=PLzUbsvIyrNfknNewObx5N7uGZ5FKH0Fde) with all of our Code Pattern videos
+* **With Watson**: Want to take your Watson app to the next level? Looking to utilize Watson Brand assets? [Join the With Watson program](https://www.ibm.com/watson/with-watson/) to leverage exclusive brand, marketing, and tech resources to amplify and accelerate your Watson embedded commercial solution.
+* **Watson Studio**: Master the art of data science with IBM's [Watson Studio](https://dataplatform.ibm.com/)
+
+# License
+
+[Apache 2.0](LICENSE)
