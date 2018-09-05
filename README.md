@@ -40,6 +40,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 1. [Create a project in Watson Studio](#2-create-a-project-in-watson-studio-and-bind-it-to-your-watson-machine-learning-service-instance)
 1. [Create a notebook in Watson Studio](#3-create-a-notebook-in-watson-studio)
 1. [Run the notebooks in Watson Studio](#4-run-the-notebook-in-watson-studio)
+1. [Add or change data set](#5-add-or-change-data-set)
 
 ### 1. Sign up for Watson Studio
 
@@ -76,6 +77,10 @@ Sign up for IBM's [Watson Studio](https://dataplatform.ibm.com). By creating a p
 * When you get to the cell that says `## 3.0 Create Classifier with Watson NLC and Evaluate Classification Accuracy`, insert the username and password that you saved from your Watson Natural Language Classifier instance into the code before running it.
 * When you get to the cell that says `3.2 Add Classifier ID`, Add the `classifier_id` that is in the output after running `3.1 Create Classifier`.
 * Continue running each cell until you finish the entire notebook.
+
+# 5. Add or change data set
+
+* The data used was generated using `tools/getdata.ipynb`. To use your own or another github repository for analysis, use this notebook and export the data via HTTP. Point to it in `notebooks/buildmodels.ipynb` section 1.0 using `wget.download()`.
 
 # Sample output
 
